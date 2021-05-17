@@ -46,7 +46,13 @@ public class Main extends Application {
         Button eightBtn = new Button("8"); eightBtn.setPrefWidth((double) SCREEN_WIDTH/4);
         Button nineBtn = new Button("9"); nineBtn.setPrefWidth((double) SCREEN_WIDTH/4);
         Button multiplyBtn = new Button("*"); multiplyBtn.setPrefWidth((double) SCREEN_WIDTH/4);
-
+        
+        Button[] buttons = new Button[]{sevenBtn,eightBtn,nineBtn,multiplyBtn};
+        for(Button eachButton: buttons) {
+            eachButton.setPrefWidth((double) SCREEN_WIDTH/5);
+        }
+            
+            
         VBox textFieldLine = new VBox(); textFieldLine.getChildren().addAll(expressionField, answerField);
         HBox line1 = new HBox();
         line1.getChildren().addAll(sevenBtn, eightBtn, nineBtn, multiplyBtn);
@@ -65,13 +71,6 @@ public class Main extends Application {
             });
         }
 
-
-        
-
-
-
-
-        
         /*********/
 
 
